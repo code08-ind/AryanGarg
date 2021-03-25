@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
 import Contact from './Contact';
@@ -13,7 +13,6 @@ import Android from './Android';
 import Flutter from './Flutter';
 import Blog from './Blog';
 import Software from './Software';
-import Error from './Error'
 import AboutMe from './AboutMe';
 import AboutSkills from './AboutSkills';
 import AboutLocation from './AboutLocation';
@@ -37,7 +36,7 @@ const App = () => {
         <Route exact path="/services/flutter" component={Flutter} />
         <Route exact path="/services/blog" component={Blog} />
         <Route exact path="/services/software" component={Software} />
-        <Route component={Error} />
+        <Redirect to="/" />
       </Switch>
     </>
   );
